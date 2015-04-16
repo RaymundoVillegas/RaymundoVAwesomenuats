@@ -11,7 +11,7 @@ var game = {
                 enemyCreepHealth:10,
                 playerHealth:10,
                 enemyCreepAttack:1,
-                playerAttack:1.5,
+                playerAttack:2,
            //     orcBaseDamage: 10,
            //   orcBaseHealth: 100,
            //     orcBaseSpeed: 3,
@@ -20,7 +20,8 @@ var game = {
                 enemyCreepAttackTimer:1000,
                 playerMoveSpeed:5,
                 creepMoveSpeed: 5,
-                gameManager: "",
+                gameTimerManager: "",
+                heroDeathManager: "",      
                 player:"", 
                 exp: 0,
                 gold: 0,
@@ -65,10 +66,11 @@ var game = {
             me.pool.register("Playerbase", game.PlayerBaseEntity);
             me.pool.register("Enemybase", game.EnemyBaseEntity);
             me.pool.register("EnemyCreep", game.EnemyCreep, true);
-           me.pool.register("GameManager", game.GameManager);
-           
-		me.state.set(me.state.MENU, new game.TitleScreen());
-		me.state.set(me.state.PLAY, new game.PlayScreen());
+            me.pool.register("GameTimerManager", game.GameTimerManager);
+            me.pool.register("HeroDeathManager" , game.HeroDeathManager);
+            
+	    me.state.set(me.state.MENU, new game.TitleScreen());
+            me.state.set(me.state.PLAY, new game.PlayScreen());
 
 		// Start the game.
 		me.state.change(me.state.MENU);
