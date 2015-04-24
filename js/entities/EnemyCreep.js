@@ -34,7 +34,6 @@ game.EnemyCreep = me.Entity.extend({
     
     
     update:function(delta){
-        console.log(this.health);
         if(this.health <= 0){
             me.game.world.removeChild(this);
         }
@@ -66,7 +65,6 @@ game.EnemyCreep = me.Entity.extend({
             //checks that it has been at least 1 second since this creep hit a base
             if(this.now-this.lastHit >= 1000){
                 //updates lasthit timer
-                console.log(response.b.health);
                 this.lastHit = this.now;
                 //makes the player base call its loseHealth function and passes it a 
                 //damage of 1
@@ -87,7 +85,6 @@ game.EnemyCreep = me.Entity.extend({
             //checks that it has been at least 1 second since this creep hit something
             if((this.now-this.lastHit >= 1000) && xdif>0){
                 //updates lasthit timer
-                console.log(response.b.health);
                 this.lastHit = this.now;
                 //makes the player call its loseHealth function and passes it a 
                 //damage of 1
