@@ -20,11 +20,13 @@ game.PlayScreen = me.ScreenObject.extend({
                 
                var spendGold = me.pool.pull("SpendGold", 0, 0, {});
                 me.game.world.addChild(spendGold, 0);
-            
+                
+                
+            //Sets keys to certain actions
                 me.input.bindKey(me.input.KEY.B, "buy");
                 me.input.bindKey(me.input.KEY.Q, "skill1");
                 me.input.bindKey(me.input.KEY.W, "skill2");
-                me.inpput.bindKey(me.input.KEY.E, "skill3");
+                me.input.bindKey(me.input.KEY.E, "skill3");
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
                 me.input.bindKey(me.input.KEY.LEFT, "left");
                 me.input.bindKey(me.input.KEY.UP, "jump");
@@ -44,6 +46,7 @@ game.PlayScreen = me.ScreenObject.extend({
 		me.game.world.removeChild(this.HUD);
 	},
         
+        //this resets my player and respawns him 87
         resetPlayer: function(x,y){
              game.data.player = me.pool.pull("player", x, y, {});
              me.game.world.addChild(game.data.player, 5); 
