@@ -94,7 +94,7 @@ game.SpendGold = Object.extend({
             if(!this.buying){
                 this.startBuying();
             }else{
-                this.stopbuying();
+                this.stopBuying();
             }
             
         }
@@ -136,7 +136,7 @@ game.SpendGold = Object.extend({
               
        }
        
-       })));
+       })), 35);
     },
     
     stopBuying: function(){

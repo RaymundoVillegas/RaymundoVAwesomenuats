@@ -46,7 +46,7 @@ game.PlayScreen = me.ScreenObject.extend({
 		me.game.world.removeChild(this.HUD);
 	},
         
-        //this resets my player and respawns him 87
+        //this resets my player and respawns him 
         resetPlayer: function(x,y){
              game.data.player = me.pool.pull("player", x, y, {});
              me.game.world.addChild(game.data.player, 5); 
