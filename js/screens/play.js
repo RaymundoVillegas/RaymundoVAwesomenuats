@@ -10,14 +10,15 @@ game.PlayScreen = me.ScreenObject.extend({
               this.resetPlayer(0, 420);
             
                 var gameTimerManager = me.pool.pull("GameTimerManager", 0, 0, {});
-                me.game.world.addChild(gameTimerManager, 0);
-            
+                me.game.world.addChild(gameTimerManager, 0);        
+            //
               var heroDeathManager = me.pool.pull("HeroDeathManager", 0, 0, {});
                 me.game.world.addChild(heroDeathManager, 0);
             
               var experienceManager = me.pool.pull("ExperienceManager", 0, 0, {});
                 me.game.world.addChild(experienceManager, 0);
                 
+                //allows me to spend cold
                var spendGold = me.pool.pull("SpendGold", 0, 0, {});
                 me.game.world.addChild(spendGold, 0);
                 
