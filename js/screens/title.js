@@ -22,7 +22,7 @@ game.TitleScreen = me.ScreenObject.extend({
        
        newGame: function(){
            me.input.releasePointerEvent('pointerdown',  this);
-           me.state.change(me.state.NEW);
+           me.state.change(me.state.PLAY);
            }
        })));
        
@@ -42,7 +42,7 @@ game.TitleScreen = me.ScreenObject.extend({
        
        newGame: function(){
            me.input.releasePointerEvent('pointerdown',  this);
-           me.state.change(me.state.LOAD);
+           me.state.change(me.state.SPENDEXP);
        
            }
        })));
